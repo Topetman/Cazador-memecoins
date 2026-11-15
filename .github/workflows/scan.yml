@@ -1,0 +1,46 @@
+name: Scan memecoins
+
+on:
+  schedule:
+    # Cada 10 minutos. GitHub no garantiza la hora exacta; a veces se retrasa unos minutos.
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      TZ: Europe/Madrid
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install -r requirements.txt
+
+      - name: Escanear y avisar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scan_tg.py
+
+      - name: Guardar avisados
+        run: |
+          git config user.name "scan-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add avisados.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en avisados.json"
+          else
+            git commit -m "avisados: actualizar tras el scan"
+            git push
+          fi

@@ -1,0 +1,784 @@
+{
+  "actualizado": "2026-11-15 21:38:05 CET",
+  "origen_semilla": "vigia_pumpfun.json avisados (Joe)",
+  "n": 111,
+  "avisados": [
+    {
+      "ca": "12iJTEQUC7HQGLhonRurJmCeJZsLepFhDzehZqCppump",
+      "symbol": "VEILPAY",
+      "hora": "2026-11-11 18:56",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "22dUu6seBkrJufXyfvSEC2sy3fspFqB4ouJhGKSXpump",
+      "symbol": null,
+      "hora": "2026-11-02 17:51",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "295n8Gb5AcWCxeSCnysfyZoibxsd9yLmsJP3JXckpump",
+      "symbol": "SCSF",
+      "hora": "2026-10-27 17:28",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "2HcvsX12NyuLnhDXoU6yWL2XLcr3snCTQ7RhqVmZuCgr",
+      "symbol": "INVISIBLE",
+      "hora": "2026-10-28 01:43",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "2N2mZbpNWtqY698SK8KKUeePbNmEg1wqVzueovi5pump",
+      "symbol": "RAPE",
+      "hora": "2026-11-11 19:57",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "2T56GBrvcyeWWyhUAzsTFW4AcFag1nr7xyzrtZn7pump",
+      "symbol": "AI",
+      "hora": "2026-11-12 22:20",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "2Y4WyQRoPZbXucsmdEnnQovuFBRiagCXmrESQ1hopump",
+      "symbol": "SUPERCYCLE",
+      "hora": "2026-10-27 18:55",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "2k9ThvFBBAtSfubUG3oVhjfS8TY3Js27xq7Gghb8pump",
+      "symbol": "Lumar",
+      "hora": "2026-10-27 22:48 Madrid",
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "37EDRsShSbXH8eE3nMvBgKWvZzPxu9FbJDCauhecpump",
+      "symbol": "Dekachichi",
+      "hora": "2026-10-28 00:07",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3NeeuERCpgdfKYBn6GsP5v7kEAUWXCBtfYtCRmRhpump",
+      "symbol": "Anon",
+      "hora": "2026-11-02T17:00Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3QSM22S5FngojLvKRt3Tkxb556EuuAmz9TkKA55Spump",
+      "symbol": "TRUMPTV",
+      "hora": "2026-10-28 00:14",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3a5Q43nNpEHyL2HeuobXkBv8eqXNcAjKpUL9AMmLpump",
+      "symbol": "ZERODAY",
+      "hora": "2026-10-26 23:41",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3e4KNV6aPTtGks2cd7HNN6UFxPC3u2PC93WyFFcSpump",
+      "symbol": "SLAB",
+      "hora": "2026-11-11 23:11",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3f1w7yEVvP61Zncm4qX8mDjk3yU5TZscx2ooDEtEpump",
+      "symbol": "DEBT",
+      "hora": null,
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3hYFP85U9q9cCp9XDNTG8SN9nWkHM5wKCJUctNXtNUBS",
+      "symbol": "BenBen",
+      "hora": "2026-11-05 19:56",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "3nXkuDUUX8S2oM1izvVEkoLUvfe5CW21wuEAm3GCpump",
+      "symbol": "TOFI",
+      "hora": "2026-11-05 20:07",
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "4bjMPgeJYCUD1A44RJ4DHFY188SCd9vrMd6u71PDpump",
+      "symbol": "Grokbot",
+      "hora": "2026-10-28 08:02",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "4pK2SJ9YMcDrpbJXQdruVkJ21asF7ATguC4kqx6em85K",
+      "symbol": "Edmond",
+      "hora": "2026-11-05 21:20",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "4t7og34RxGP2eG2mzZovbqAVH5cyLDWQitHVxFSepump",
+      "symbol": "sweater",
+      "hora": "2026-11-11 22:18",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5RvL4VWX6nduCt17P5k3FKJA8jo3wRkUZ29aHQThpump",
+      "symbol": "CHEESE",
+      "hora": "2026-10-27 17:46 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5TKFWn9dfEUMmL6pni1MpuUobKpbZuXWe6HTRN7ppump",
+      "symbol": "maxxing",
+      "hora": "2026-10-26 21:29",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5bGXVywbvGZ1szFKsv3HMCJWV7FMcBVUdabUnntFpump",
+      "symbol": "EDS",
+      "hora": "2026-10-27 01:30",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5bcYvME5Ky6QkpizvVSWF2yPxM4sNpfLDxwpQJ1Jpump",
+      "symbol": "Heera",
+      "hora": "2026-10-19T14:04Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5ejn3WqMHKgf57puQywbuYGyhPuuP9UXizKqV332pump",
+      "symbol": "Olivia",
+      "hora": "2026-10-25T23:27Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5vrJeZti4yVQ3tbEV5rQWe6DcYpCzPp5RfU5bGNepump",
+      "symbol": "gambul",
+      "hora": "2026-10-27 01:43",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "5wNFgwjF2SAWoLpiSjcCbdVaxhEmHPnNMFveb8D3pump",
+      "symbol": "SI",
+      "hora": "2026-10-19T14:36Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "6McP2ZVwSy4tjxvmMSESoxTPrRqGhGJ2qeAQYs29pump",
+      "symbol": "SURVIVAL",
+      "hora": "2026-10-28 11:51",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "6iAwm4NHekCMHAHCpifWFASKWgCQUZMXYTnAgBg3pump",
+      "symbol": "GIN",
+      "hora": "2026-10-26 21:55 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "6yThu8SLx2zYNzMC2LrVpWcJA2JRz3dNEzYUukuPpump",
+      "symbol": "KITKAT",
+      "hora": "2026-10-19T12:41Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7ECYUfkSpi4GZoQQFNqaX4YrTMESxURQUqfqrLZEpump",
+      "symbol": "SOLDIER",
+      "hora": "2026-10-26T18:48Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7F968EUuLBzUcCzhD6FZpXaTWAybKZDkWFmwoVArcAc",
+      "symbol": "Darla",
+      "hora": "2026-10-27 13:55",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7FxGzQZjdxL87R9hTvtghmtn1vCUc79oVvKiV31azZrQ",
+      "symbol": null,
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7GSsGcF5ARJ1p2zwzidHidVGjSQe4sEkyxYG9WNmpump",
+      "symbol": "CATCANDIEZ",
+      "hora": "2026-10-27 23:45",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7K2WLGUaf48BJ3BnT8HGbgpnAirHj9o5Y7orkCicpump",
+      "symbol": "Chillbank",
+      "hora": "2026-10-27 19:08 Madrid",
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7Xv8MsH7iX8Se4QtwVdRtqtAAh7X8v4X8tg8xDvKpump",
+      "symbol": "SP",
+      "hora": "2026-10-28 16:16",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7fNYfFkDefatZugpcgaHqGxQuwm6JzcRYDQrdajqpump",
+      "symbol": null,
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7gPmhsksQ5vwtgE7vCn121qHyZjep4R5J7NNDygaHTho",
+      "symbol": "Onion",
+      "hora": "2026-10-19T14:21Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7nJKEbWKXJBqesd1YR1hfcbzMRsUhPB9k8a2NMd5pump",
+      "symbol": null,
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7osjTJ15Dx4YNhcseKB7rX4GnNJy7e3ANWhBfYnLpump",
+      "symbol": "Vibedog",
+      "hora": "2026-11-11 20:25",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "7zN9PK3NR7dVu9rqtSmNTVwbHETLa6kFA2GtREHSpump",
+      "symbol": "Somanna",
+      "hora": "2026-10-26T14:55Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "81XGyr3bu1hw3ktVf6sj5ZSbZP6sD6KyyLpzhmQrpump",
+      "symbol": "SHIBAHOLICS",
+      "hora": "2026-11-02T15:54Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "81raBAmnxZUr9yVFpaiTurCH43yT6fDYNVShxBWwpump",
+      "symbol": "YET",
+      "hora": "2026-10-27 17:36 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8AaRbQrd42Uad3EYBJ5nhVhfXhURQdDKVNdTqySHpump",
+      "symbol": "EHE",
+      "hora": "2026-10-26 21:02",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8GuVR3sYf9mPXbSSGVcGRXmWBgcTRxsjx9WX5hPu2CD",
+      "symbol": "Messenger",
+      "hora": "2026-11-05 20:25",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8KwLDzEDYdp9hP8YNsx29Kjzp3pNHTacQHdYgjibpump",
+      "symbol": "pumpcat",
+      "hora": "2026-11-02 18:08",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8Uk9f5WfJndkC9VkFRLDwEpHgD2KD8BcFbqh5zuBpump",
+      "symbol": "SB",
+      "hora": "2026-10-27 23:16",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8XQ9aG8FH5YTNwt86n95jaCLZc96oFN8uxMoazjopump",
+      "symbol": "MARKETCAT",
+      "hora": "2026-10-26T15:41Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8bTJDVTG1xPuP4GsaXVKCRrbG4mRehhn5AyFy9yapump",
+      "symbol": "BERNIE",
+      "hora": "2026-11-11 19:37",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8muc9DdhqWfAPcvmEebNQCG89bLiwi12T2KtBtzVpump",
+      "symbol": "ANONVOYAGE",
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8txe6ctd4cSqyeDuRripBiEawR4t8C2yS9Rm9gcbpump",
+      "symbol": "HOPESCROLL",
+      "hora": "2026-10-27T18:18Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "8yEFghpfdgX1e1gZj8mf3Ep96UmdB14YMdV51PWGX8HQ",
+      "symbol": "PENGUIN",
+      "hora": "2026-11-05 20:35",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "92Zt8E5bx9ZfCim59ps26KwLpAycL3rwsdB12PXNpump",
+      "symbol": "NOTHING",
+      "hora": "2026-11-02T16:01Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9PMAks6e72ZtPGgFkeHp98hx5t9XkCusDAxYNdbqpump",
+      "symbol": "TOLY",
+      "hora": "2026-10-27 18:40 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9RyENt3gJ1MEsFPiJAMyNerYYngLDuyZfVP4GBqepump",
+      "symbol": "TILLY",
+      "hora": "2026-11-11 23:31",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9a13W5HdqE95g3YE8Dk9wCHPucrCH33h6BTfdFvRpump",
+      "symbol": "plumber",
+      "hora": "2026-11-12 23:44",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9ccqj9qwjB99xLnov3fHRJzsctn36WkLYs2MJ5HTpump",
+      "symbol": "GRANDMA",
+      "hora": "2026-11-11 18:51",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9jagsMN5JXejGRb3sMT44ZAin6D6x2VzYgvDXumWtHB8",
+      "symbol": "🐈/ACC",
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9qFLDMMnumokbimwL16Nzu7zLTzV3qvrNMy6Haohpump",
+      "symbol": "blue",
+      "hora": "2026-11-04T15:21Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9rZR9nCQbaiBvotWVpifN8z1vckVFshnsATuAJrXpump",
+      "symbol": "Slingoor",
+      "hora": "2026-11-02 17:08",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "9tqZaVfRo1CnJEHGpgXVrYU65pbScwHsWJ2p69BApump",
+      "symbol": "NNW",
+      "hora": "2026-10-26T18:29Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "A1nrd1Vrm5GpQg2NTqVbfChsmrwF3xkmSdPGAKRrpump",
+      "symbol": "Tessa",
+      "hora": "2026-10-26 23:28",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "AKrvXfC9Z45wzwTLNhk36Nt7BnE4qjruxXUxTDbmpump",
+      "symbol": "Gala",
+      "hora": "2026-10-28 13:32",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "APiaEnj8ghNUS1a5qCBKbEKEZbkSsui55NdPod3opump",
+      "symbol": "SWC",
+      "hora": "2026-11-02T16:45Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "AhbaudYm3E8yzw84vSh6gupP6jf67eusoW77ziHwpump",
+      "symbol": "Paki",
+      "hora": "2026-10-26T15:05Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "AoBPSscyJz4BUzDw3yXbGL8x6odf49bFWAuFqoYupump",
+      "symbol": "Hedgecat",
+      "hora": "2026-11-05T18:18Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "B2MFrwFqL1ey8cf49VwnJtNCecjoAMBnMayZU9Dbpump",
+      "symbol": "Rex",
+      "hora": "2026-11-12 01:46",
+      "color": "🔴",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "B5nutHeAAPyNedsDtzzq2yc3mRtcD79tC5R1dVB3skEi",
+      "symbol": "Snork",
+      "hora": "2026-11-05 21:48",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "BRdWAVRRkX2GntFbeC12gsMKPxrEyYRRcgXkbpiZpump",
+      "symbol": "Cows",
+      "hora": "2026-10-19T12:25Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "BetzJU2X9UEgG2qdo8UKbJ6q1iiFGs23axh8vRqEpump",
+      "symbol": "SKUNK",
+      "hora": "2026-11-11T21:06Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "BfmHAgkbrQuW4izeQgiCmLacu6GAhgfDuxcTVFiJpump",
+      "symbol": "NA",
+      "hora": "2026-10-19T19:16Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Bj5kMoETDgnHkFLimkST4MdopAJXoCF63Sm6sLoHpump",
+      "symbol": "THREADGOY",
+      "hora": "2026-10-27 18:31",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Bmhp8nat7zTFu3Ct8HpQftiHHmB6dnf4B9ivvYYzpump",
+      "symbol": "TIRED",
+      "hora": "2026-11-05 19:36",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Bn4gjAkMHH2mhH2dq8rkSbAAWce59ZsMrrZDWgqfpump",
+      "symbol": "LOUKAS",
+      "hora": "2026-10-27 14:06",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Bxyp4L6EbDys4fo51qxMEQTx41sj6McnsbPZTdvipump",
+      "symbol": "CLIPPED",
+      "hora": "2026-11-02 14:25",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "BzzPk3ymyjSsBURWAADNzdfHjxvuhiEmPETcvsd4pump",
+      "symbol": "Stu",
+      "hora": "2026-10-28 09:26",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "C6vwk8YUcpw7un4V8dVagi4FpaRY1zSB5cZJvGVwpump",
+      "symbol": "BATON",
+      "hora": "2026-10-19T12:47Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "CCSqn2uUBHgeEPLtYcdV3RP3gXKRRBna6jkgFHVopump",
+      "symbol": "LongCat",
+      "hora": "2026-11-02 16:55",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "CNEurcBYKgtZ2sLKQuzPd6ABGdkwTQo3q1zJ7ogCzN9R",
+      "symbol": "Envelope",
+      "hora": "2026-11-05 20:15",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "CR4qhagPCFZ7XUsJdG4bWPveSin1J1TVDGvG8z3qpump",
+      "symbol": "Nightjar",
+      "hora": "2026-10-27 00:33",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Cb2h3Y5vuWnZ6YZoJghmSNty7XqK9imUFTtpz2Ghpump",
+      "symbol": "BENNY",
+      "hora": "2026-10-19T14:44Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "D3EDwVvJgVjhv97Q4GZhNnyFZF9zs8FqEwPajzQspump",
+      "symbol": "Lemon",
+      "hora": "2026-11-11 19:57",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "DVMfDdYRoQX4XMEbD9eKNBYZUxuaTVCpbunYQV9Lpump",
+      "symbol": "Mines",
+      "hora": "2026-10-19T14:30Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "DWdBJoNezK9itTwmPDYrScYpBxvWySxeWWV8N9RcmdrT",
+      "symbol": "COGE",
+      "hora": "2026-11-05 19:58",
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "DcJddPUMkqJNsZxoFVZ9zbzAFUuLh43MZW9yixbdpump",
+      "symbol": "FELIPE",
+      "hora": "2026-11-09T20:03Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Dh7Fj3WFDWaz7Vkq1iHZLW8qJw6BkVxbpsY1gMkppump",
+      "symbol": "Jest",
+      "hora": "2026-10-27 18:16 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "DjQpP7tQpriEKRBoJFLg4bzh3U33KFKJvsKWUYZqpump",
+      "symbol": "Something",
+      "hora": "2026-10-27 16:59",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "DmV6TCYwTrekmLRFwWkPEbZCUYGLg1WoRmXiUBHKpump",
+      "symbol": "FTR",
+      "hora": "2026-10-27 17:55",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "EBafgSAZnQgHuY1SH8Hgv3QiAPKZuDiK4pW1ZBGkjyuU",
+      "symbol": "Chips",
+      "hora": "2026-11-02T16:12Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "EU8FRfypHiRKZvQZJMwvYTWM8HaXYWYCwhbbqcyBpump",
+      "symbol": "BRINGITON",
+      "hora": "2026-11-11T22:20Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "EdCUGdHEkyEYKaA44bUR4vp6PtLiBPmyPp2pCWKppump",
+      "symbol": null,
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "EnSzqg3CPQy1z9bbqBSNaPBVCs1cSRGrjxdFQBCapump",
+      "symbol": "SEED",
+      "hora": "2026-10-27 14:22",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "EyS3pPRHX6Q3eQAXxkoWKQyrEaExVfyByvFo8GQQpump",
+      "symbol": "Never",
+      "hora": "2026-10-26T07:27Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "FGJZLY6SZ685EyJcU9M3gBPFJkSxDAfHWdxn7Fjppump",
+      "symbol": "Kaikamuri",
+      "hora": "2026-10-26T16:26Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "FMF2Us9vCZtjzsgyNZRqkuoJKoT8786dLVwtAvZ5pump",
+      "symbol": "KIKO",
+      "hora": "2026-10-26 21:58",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "FeGciUA6sVQVpuaXPTg8FbzkCjy5aPgPBsziWiqQpump",
+      "symbol": "GDOG",
+      "hora": "2026-10-27 19:59 Madrid",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "FoV6PirGWo82XtC9QdcXy9ezEo3LKKjWAJrTt8GFpump",
+      "symbol": "Tengu",
+      "hora": "2026-10-19T17:29Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "Fqp8swab9Vm2b7RQyZD8gYabweuZ5A98fF8CJabWpump",
+      "symbol": "YO PATTY",
+      "hora": "2026-11-11T18:20Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "FzmCNc3PqTc1NmFbVZDpJNFNHsSnrwNnDKfKksH8pump",
+      "symbol": "Pirate",
+      "hora": "2026-11-02 16:22",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "G6fogMihKcNpnLBfbKCjTqr2QgLRJpxDp1J9EZ6kpump",
+      "symbol": "norms",
+      "hora": "2026-11-03T13:21Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "GrwnS2C452TQZJzw8sSyKKhKTYS61GNfhgyJjE9apump",
+      "symbol": "FIFI",
+      "hora": "2026-10-27 17:10",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "HAmxfHc5k26HBSGbPFGM8qtLRLfwuLQeVWKThSo1pump",
+      "symbol": "JPM",
+      "hora": "2026-10-19T20:28Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "HvYk4gLXKYuU5wvN9tkL24dWaHuWRmS9YKQy3HYD8GWy",
+      "symbol": "Shrub",
+      "hora": "2026-10-19T15:06Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "HzwVr7KjPhUriHK9MrJbFzbTDTPwUXGrL2Ah2wVhpump",
+      "symbol": null,
+      "hora": null,
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "J58Lht8j8HwwqfEjoqgSvnxEpdsMJqenoa35faxipump",
+      "symbol": "Koyuri",
+      "hora": null,
+      "color": "naranja",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "VFck39CHFLoX74ws4YzioK61TAGe1QTQB3tma7Rpump",
+      "symbol": "ANT",
+      "hora": "2026-10-26T14:26Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "bn5DhJnkB8EVDoAgV9qCV3Kbv7XmEEp7mxW4npDpump",
+      "symbol": "GACHAZ",
+      "hora": "2026-11-11 19:22",
+      "color": "🟠",
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "fLofiR8fjdY1hLboF1B5YeivewJTcuMh9VnBkJLpump",
+      "symbol": "CAT",
+      "hora": "2026-10-26 21:51",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "iwPkJ45T2JegPCrzq1hECwiB9oJow5PYm7xJ28Mpump",
+      "symbol": "SIB",
+      "hora": "2026-10-28 09:12",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "kLgAzseCmrDCWXufZGzs8MPs3PvgTgZPBr1rVSopump",
+      "symbol": "Voyager",
+      "hora": "2026-11-02T15:54Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "ogTggyGZD3sbJngxiVjnNFfbjRYaHYYCePSXgQEpump",
+      "symbol": "SPACEXKIDS",
+      "hora": "2026-10-19T14:13Z",
+      "color": null,
+      "origen": "semilla joe"
+    },
+    {
+      "ca": "ucGLSrF72fjHtQse3xvpxCr1NRfmYCUCRDRySwFpump",
+      "symbol": "Bebe",
+      "hora": "2026-10-27 14:39",
+      "color": null,
+      "origen": "semilla joe"
+    }
+  ]
+}

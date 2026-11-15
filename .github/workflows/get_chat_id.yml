@@ -1,0 +1,63 @@
+name: Obtener chat id
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-chat-id:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencias
+        run: pip install requests
+
+      - name: Leer mensajes y mostrar el chat id
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, sys, requests
+
+          tok = os.environ.get("TELEGRAM_BOT_TOKEN") or ""
+          if not tok:
+              print("Falta el secret TELEGRAM_BOT_TOKEN. Añádelo en Settings > Secrets and variables > Actions.")
+              sys.exit(1)
+
+          r = requests.get(f"https://api.telegram.org/bot{tok}/getUpdates", timeout=20)
+          if r.status_code != 200:
+              print(f"Telegram ha contestado HTTP {r.status_code}. Revisa que el token sea correcto.")
+              sys.exit(1)
+          data = r.json()
+          if not data.get("ok"):
+              print("Telegram no ha aceptado la petición. Revisa que el token sea correcto.")
+              sys.exit(1)
+
+          vistos = []
+          ids_ya = set()
+          for u in data.get("result") or []:
+              for k in ("message", "edited_message", "my_chat_member", "channel_post"):
+                  ch = (u.get(k) or {}).get("chat") or {}
+                  cid = ch.get("id")
+                  if cid is None or cid in ids_ya:
+                      continue
+                  ids_ya.add(cid)
+                  vistos.append({
+                      "id": cid,
+                      "tipo": ch.get("type"),
+                      "nombre": ch.get("first_name") or ch.get("title") or ch.get("username") or "",
+                  })
+
+          if not vistos:
+              print("No he visto ningún mensaje.")
+              print("Abre tu bot en Telegram, mándale un hola y vuelve a ejecutar este workflow.")
+              sys.exit(0)
+
+          print("Chat id(s) encontrados. Copia el número en el secret TELEGRAM_CHAT_ID:")
+          for x in vistos:
+              print(f"  id={x['id']}  tipo={x['tipo']}  nombre={x['nombre']}")
+          PY
