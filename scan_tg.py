@@ -306,6 +306,7 @@ def main():
         for d in descartes_extra:
             print(" -", d)
 
+    n_antes = len(cas_avisados(doc))
     if not enviaria:
         print("Ningún aviso nuevo.")
     for e in enviaria:
@@ -314,7 +315,6 @@ def main():
         print("-" * 40)
         if not dry:
             enviar_telegram(e["_mensaje"])
-            time.sleep(0.4)
             doc.setdefault("avisados", []).append({
                 "ca": e["ca"],
                 "symbol": e.get("symbol"),
@@ -325,8 +325,12 @@ def main():
             })
             ya.add(e["ca"])
             print(f"enviado {e.get('symbol')} {e['ca'][:8]}…")
+            # Tras cada envío, no al final: si Telegram falla a mitad, lo ya enviado queda grabado.
+            guardar_avisados(doc)
+            print(f"avisados.json actualizado ({len(cas_avisados(doc))} CA)")
+            time.sleep(0.4)
 
-    if not dry:
+    if not dry and len(cas_avisados(doc)) == n_antes:
         guardar_avisados(doc)
         print(f"avisados.json actualizado ({len(cas_avisados(doc))} CA)")
 

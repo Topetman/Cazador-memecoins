@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# Una ejecución a la vez. La que ya está en curso sigue; la siguiente espera.
+concurrency:
+  group: scan-memecoins
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -18,6 +23,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historial completo para que pull --rebase funcione si main avanzó durante el scan.
+          fetch-depth: 0
 
       - name: Python
         uses: actions/setup-python@v5
@@ -28,19 +36,186 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Escanear y avisar
+        id: scan
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scan_tg.py
 
       - name: Guardar avisados
+        # También si el scan falla: un envío a medias ya dejó contratos en avisados.json.
+        if: always() && (steps.scan.outcome == 'success' || steps.scan.outcome == 'failure')
         run: |
-          git config user.name "scan-bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add avisados.json
-          if git diff --staged --quiet; then
-            echo "Sin cambios en avisados.json"
-          else
-            git commit -m "avisados: actualizar tras el scan"
-            git push
-          fi
+          python3 - <<'PY'
+          import json, os, subprocess, time
+          from pathlib import Path
+
+          def run(args, check=True):
+              print("+", " ".join(args), flush=True)
+              result = subprocess.run(args)
+              if check and result.returncode != 0:
+                  raise SystemExit(result.returncode)
+              return result.returncode
+
+          def cas_set(doc):
+              out = set()
+              for item in doc.get("avisados") or []:
+                  if isinstance(item, dict) and item.get("ca"):
+                      out.add(item["ca"])
+                  elif isinstance(item, str) and item:
+                      out.add(item)
+              return out
+
+          def entries(doc):
+              items, seen = [], set()
+              for item in doc.get("avisados") or []:
+                  if isinstance(item, dict) and item.get("ca"):
+                      ca, kept = item["ca"], item
+                  elif isinstance(item, str) and item:
+                      ca, kept = item, item
+                  else:
+                      continue
+                  if ca in seen:
+                      continue
+                  seen.add(ca)
+                  items.append(kept)
+              return items
+
+          def merge_docs(upstream, local):
+              # La lista de main va primero; se añaden los contratos que solo están en este scan.
+              seen, merged = set(), []
+              for item in entries(upstream) + entries(local):
+                  ca = item["ca"] if isinstance(item, dict) else item
+                  if ca in seen:
+                      continue
+                  seen.add(ca)
+                  merged.append(item)
+              out = dict(upstream)
+              for key, value in local.items():
+                  if key == "avisados":
+                      continue
+                  if key not in out or key in ("actualizado", "n"):
+                      out[key] = value
+              stamps = [d.get("actualizado") for d in (upstream, local) if d.get("actualizado")]
+              if stamps:
+                  out["actualizado"] = max(stamps)
+              out["avisados"] = merged
+              out["n"] = len(merged)
+              return out
+
+          def dump(doc):
+              Path("avisados.json").write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+
+          def show_json(ref):
+              result = subprocess.run(
+                  ["git", "show", f"{ref}:avisados.json"],
+                  capture_output=True, text=True,
+              )
+              if result.returncode != 0:
+                  return None
+              return json.loads(result.stdout)
+
+          def rebasing():
+              for name in ("rebase-merge", "rebase-apply"):
+                  path = subprocess.check_output(
+                      ["git", "rev-parse", "--git-path", name], text=True,
+                  ).strip()
+                  if os.path.isdir(path):
+                      return True
+              return False
+
+          def unmerged():
+              result = subprocess.run(
+                  ["git", "diff", "--name-only", "--diff-filter=U"],
+                  capture_output=True, text=True, check=True,
+              )
+              return [line for line in result.stdout.splitlines() if line]
+
+          def editor_env():
+              env = os.environ.copy()
+              env["GIT_EDITOR"] = "true"
+              env["GIT_SEQUENCE_EDITOR"] = "true"
+              return env
+
+          def finish_rebase():
+              while rebasing():
+                  files = unmerged()
+                  if files and files != ["avisados.json"]:
+                      print("Conflicto al integrar main en:", ", ".join(files))
+                      run(["git", "rebase", "--abort"], check=False)
+                      raise SystemExit(1)
+                  if files == ["avisados.json"]:
+                      upstream = show_json("HEAD")
+                      local = show_json("REBASE_HEAD")
+                      if upstream is None or local is None:
+                          print("No se pudieron leer las dos versiones de avisados.json")
+                          run(["git", "rebase", "--abort"], check=False)
+                          raise SystemExit(1)
+                      if cas_set(upstream) == cas_set(merge_docs(upstream, local)):
+                          print("main ya tiene esos contratos; se descarta el commit duplicado.")
+                          run(["git", "rebase", "--skip"])
+                          continue
+                      merged = merge_docs(upstream, local)
+                      print(f"Conflicto en avisados.json; lista unida ({merged['n']} contratos).")
+                      dump(merged)
+                      run(["git", "add", "avisados.json"])
+                  result = subprocess.run(["git", "rebase", "--continue"], env=editor_env())
+                  if result.returncode != 0:
+                      if rebasing() and unmerged():
+                          continue
+                      run(["git", "rebase", "--abort"], check=False)
+                      raise SystemExit(result.returncode or 1)
+
+          def assert_clean():
+              text = Path("avisados.json").read_text()
+              if "<<<<<<<" in text or ">>>>>>>" in text:
+                  raise SystemExit("avisados.json quedó con marcas de conflicto")
+              json.loads(text)
+
+          def push_with_retries(branch):
+              delay = float(os.environ.get("AVISADOS_RETRY_SLEEP", "2"))
+              for intento in range(1, 4):
+                  print(f"Intento {intento}/3: integrar {branch} y subir avisados.json", flush=True)
+                  pull = subprocess.run(["git", "pull", "--rebase", "origin", branch])
+                  if pull.returncode != 0:
+                      if rebasing():
+                          finish_rebase()
+                      else:
+                          print("git pull --rebase falló; se reintenta.", flush=True)
+                          time.sleep(delay * intento)
+                          continue
+                  assert_clean()
+                  push = subprocess.run(["git", "push", "origin", "HEAD"])
+                  if push.returncode == 0:
+                      print("avisados.json guardado.", flush=True)
+                      return
+                  print("git push rechazado; se reintenta.", flush=True)
+                  time.sleep(delay * intento)
+              raise SystemExit("No se pudo guardar avisados.json tras 3 intentos.")
+
+          def main():
+              run(["git", "config", "user.name", "scan-bot"])
+              run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"])
+              head = show_json("HEAD")
+              if head is None:
+                  raise SystemExit("No está avisados.json en HEAD")
+              work = json.loads(Path("avisados.json").read_text())
+              if cas_set(head) == cas_set(work):
+                  print("Sin contratos nuevos en avisados.json; no se hace commit.")
+                  run(["git", "checkout", "--", "avisados.json"], check=False)
+                  return 0
+              nuevos = sorted(cas_set(work) - cas_set(head))
+              print(f"Contratos nuevos ({len(nuevos)}): {', '.join(nuevos[:10])}")
+              run(["git", "add", "avisados.json"])
+              run(["git", "commit", "-m", "avisados: actualizar tras el scan"])
+              branch = subprocess.check_output(
+                  ["git", "rev-parse", "--abbrev-ref", "HEAD"], text=True,
+              ).strip()
+              if branch == "HEAD":
+                  raise SystemExit("Checkout en detached HEAD; no se puede guardar.")
+              push_with_retries(branch)
+              return 0
+
+          if __name__ == "__main__":
+              raise SystemExit(main())
+          PY
