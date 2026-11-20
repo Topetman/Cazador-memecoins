@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-11-20 01:35:07 CET",
+  "actualizado": "2026-11-20 03:48:03 CET",
   "origen_semilla": "vigia_pumpfun.json avisados (Joe)",
-  "n": 127,
+  "n": 128,
   "avisados": [
     {
       "ca": "12iJTEQUC7HQGLhonRurJmCeJZsLepFhDzehZqCppump",
@@ -907,6 +907,14 @@
       "color": "🟠",
       "origen": "scan_tg",
       "mcap": 76012.0
+    },
+    {
+      "ca": "J368btynAg5qCa414hj9WriSmRwp6H2sgWzXoRt3pump",
+      "symbol": "MISU",
+      "hora": "2026-11-20 03:48:03 CET",
+      "color": "🟠",
+      "origen": "scan_tg",
+      "mcap": 41924.0
     }
   ]
 }
